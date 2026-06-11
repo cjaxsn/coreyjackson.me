@@ -4,13 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Test Page</title>
-    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/all.css">
     <style type="text/css">
-        
+        .myClass {
+          color: #FF0000;
+          border: 1px solid #000000;
+          cj: test;
+          --fa: "\f16d";
+        }
     </style>
 </head>
 <body>
-  Test  <i class="fa-solid fa-earth-americas"></i>
-  <i class="fa-regular fa-earth-americas"></i>
+  <div id="divResults"></div>
+  <script>
+    function getUnicodeByName(iconName)
+  {
+    const objElement = document.createElement('i');
+    objElement.className = iconName;
+    document.body.appendChild(objElement);
+    const objStyles = window.getComputedStyle(objElement);
+    const faUnicode = objStyles.getPropertyValue('--fa');
+    console.log(iconName + ": " + faUnicode);
+    return faUnicode;
+  }
+
+  document.getElementById("divResults").innerHTML = getUnicodeByName("fa-brands fa-instagram");
+  document.getElementById("divResults").innerHTML = document.getElementById("divResults").innerHTML + getUnicodeByName("fa-brands fa-facebook");
+  </script>
 </body>
 </html>

@@ -1,2 +1,76 @@
 "Font Awesome 7 Pro": "U+20,U+2F,U+E042,U+E0C6,U+E0D2,U+E0DC,U+E0E9,U+E165,U+E1EC,U+E206,U+E267,U+E3D1,U+E471,U+E4A2,U+E4E5,U+E533,U+E54B,U+E574,U+E5E9,U+E5FD,U+E699,U+E6A1,U+F007,U+F015,U+F023,U+F085,U+F08E,U+F0AE,U+F0B1,U+F0C2,U+F0C5,U+F0D1,U+F0EC,U+F0F2,U+F126,U+F133,U+F19D,U+F1AB,U+F1C0,U+F1C9,U+F228,U+F247,U+F2DB,U+F2EC,U+F37E,U+F3B3,U+F40E,U+F49C,U+F508,U+F52D,U+F534,U+F542,U+F56D,U+F57D,U+F5AB,U+F5BB,U+F5DA,U+F5F3,U+F611,U+F643,U+F647,U+F6FF,U+F78A,U+F7E7,U+F7EA,U+F808,U+F82C"
 "Font Awesome 7 Brands": "U+20,U+2F,U+E5AE,U+E663,U+F08C,U+F092,U+F16D,U+F368"
+
+E5AE fa-square-gitlab
+E663 fa-signal-messenger
+f08c fa-linkedin
+F092 fa-square-github
+F16D fa-instagram
+F368 fa-accessible-icon
+
+
+U+E042 fa-transporter
+U+E0C6 fa-brain-circuit
+U+E0D2 fa-calendar-clock
+U+E0DC fa-cart-shopping-fast
+U+E0E9 fa-chart-scatter-bubble
+U+E165 fa-display-code
+U+E1EC fa-microchip-ai
+U+E206 fa-paintbrush-pencil
+U+E267 fa-square-code
+U+E3D1 fa-uniform-martial-arts
+U+E471 fa-calendar-circle-user
+U+E4A2 fa-rectangle-history
+U+E4E5 fa-computer
+U+E533 fa-people-group
+U+E54B fa-person-military-rifle
+U+E574
+U+E5E9
+U+E5FD
+U+E699
+U+E6A1
+U+F007
+U+F015
+U+F023
+U+F085
+U+F08E
+U+F0AE
+U+F0B1 
+U+F0C2
+U+F0C5
+U+F0D1
+U+F0EC
+U+F0F2
+U+F126
+U+F133
+U+F19D
+U+F1AB
+U+F1C0
+U+F1C9
+U+F228
+U+F247
+U+F2DB
+U+F2EC
+U+F37E
+U+F3B3
+U+F40E
+U+F49C
+U+F508
+U+F52D
+U+F534
+U+F542
+U+F56D
+U+F57D
+U+F5AB
+U+F5BB
+U+F5DA
+U+F5F3
+U+F611
+U+F643
+U+F647
+U+F6FF
+U+F78A
+U+F7E7
+U+F7EA
+U+F808
+U+F82C
