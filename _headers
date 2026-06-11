@@ -1,2 +1,5 @@
+https://coreyjackson-me.pages.dev/*
+  X-Robots-Tag: noindex
+
 /jaxrent/*
   Content-Security-Policy: script-src 'self' 'unsafe-inline' https://www.gstatic.com https://gstatic.com https://apis.google.com https://translation.googleapis.com
