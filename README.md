@@ -1,2 +1,2 @@
 # coreyjackson.me
-coreyjackson.me website
+https://coreyjackson.me website
