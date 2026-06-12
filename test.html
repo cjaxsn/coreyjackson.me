@@ -14,7 +14,7 @@
     </style>
 </head>
 <body>
-  <i class="fa-laptop fa-solid"></i>
+  <i class="fa-laptop fa-solid whatever"></i>
   <i class="fa-solid fa-user"></i>
   <i class="fa-regular fa-laptop-arrow-down"></i>
   <i class="fa-brands fa-instagram"></i>
@@ -41,7 +41,7 @@
 
   function getFAList(strClassName)
   {
-    console.log(strClassName);
+    //console.log(strClassName);
     const elements = document.querySelectorAll(`.${strClassName}`);
     
     document.getElementById("divCSSDeclaration").insertAdjacentHTML('beforeend', "<br/>" + strClassName + "<br/>");
@@ -57,24 +57,27 @@
       
       //get --fa value
       const strFAUnicode = objStyles.getPropertyValue('--fa');
-      //console.log(strFAUnicode);
-      document.getElementById("divFAUnicode").insertAdjacentHTML('beforeend', strFAUnicode + "<br/>");
-
+      
       //Glphhanger unicode values
       const strGlyphhangerCode = "U+" + strFAUnicode.substring(2, strFAUnicode.length - 1);
       document.getElementById("divGlyphhangerUnicode").insertAdjacentHTML('beforeend', strGlyphhangerCode.toUpperCase() + ",");
       
 
       element.classList.forEach(clElement => {
-        if (clElement != strClassName)
+        if ((clElement != strClassName) && (clElement.includes("fa-") == true))
         {
-          //console.log(clElement);
+          console.log(clElement);
+
+          //Define FA CSS Declaration
           const strCSSDeclaration = "." + clElement + " { --fa: " + strFAUnicode + "; } ";
           console.log(strCSSDeclaration);
           document.getElementById("divCSSDeclaration").insertAdjacentHTML('beforeend', strCSSDeclaration + "<br/>");
         }
       });
      
+      //console.log(strFAUnicode);
+      document.getElementById("divFAUnicode").insertAdjacentHTML('beforeend', strFAUnicode + "<br/>");
+
     });
   }
 
