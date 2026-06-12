@@ -15,13 +15,15 @@
     </style>
 </head>
 <body>
-  <i class="fa-solid fa-laptop"></i>
+  <i class="fa-laptop fa-solid"></i>
   <i class="fa-solid fa-user"></i>
   <i class="fa-regular fa-laptop-arrow-down"></i>
   <i class="fa-brands fa-instagram"></i>
+  <i class="fa-solid fa-circle-user"></i>
   <i class="fa-solid fa-hashtag"></i>
   <i class="fa-brands fa-youtube"></i>
-  <div id="divResults"></div>
+  <div>CSS Declaration</div>
+  <div id="divCSSDeclaration"></div>
   <script>
     function getUnicodeByName(iconName)
   {
@@ -34,19 +36,36 @@
     return faUnicode;
   }
 
+
+  /* .fa-laptop { --fa: "\f109"; } */
   function getFAList(strClassName)
   {
     const elements = document.querySelectorAll(`.${strClassName}`);
 
+    //document.getElementById("divCSSDeclaration").innerHTML = strClassName + "<br/>";
+    console.log(strClassName);
+
     elements.forEach(element => {
-      console.log(element);
-      const styles = element.computedStyleMap()
-      const objFAProp = styles.get("--fa"); //CSSUnparsedValue
-      console.log(objFAProp);
+      //console.log(element);
+      
+      //get element styles
       const objStyles = window.getComputedStyle(element); //CSSStyleDeclaration
       //console.log(objStyles);
+      
+      //get --fa value
       const strFAUnicode = objStyles.getPropertyValue('--fa');
-      console.log(strFAUnicode);
+      //console.log(strFAUnicode);
+
+      element.classList.forEach(clElement => {
+        if (clElement != strClassName)
+        {
+          //console.log(clElement);
+          const strCSSDeclaration = ".fa-laptop { --fa: " + strFAUnicode + "; } ";
+          console.log(strCSSDeclaration);
+          document.getElementById("divCSSDeclaration").innerHTML = document.getElementById("divCSSDeclaration").innerHTML + strCSSDeclaration + "<br/>";
+        }
+      });
+     
     });
   }
 
