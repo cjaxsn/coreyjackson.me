@@ -84,8 +84,6 @@ function getFAList(strClassName)
           const strCSSDeclaration = "." + clElement + " { --fa: " + strFAUnicode + "; } ";
           //console.log(strCSSDeclaration);
           arrFACSSDecl.push(strCSSDeclaration);
-
-          //TO DO - remove duplicates
         }
       });
           
@@ -94,9 +92,12 @@ function getFAList(strClassName)
 
     });
 
-    arrFACSSDecl.sort();
-    console.log(arrFACSSDecl.length);
-    for (const styledecl of arrFACSSDecl) {
+    //remove duplicates
+    const arrFACSSDeclUnique = Array.from(new Set(arrFACSSDecl));
+
+    arrFACSSDeclUnique.sort();
+    console.log(arrFACSSDeclUnique.length);
+    for (const styledecl of arrFACSSDeclUnique) {
       //console.log(styledecl);
       document.getElementById("divCSSDeclaration").insertAdjacentHTML('beforeend', styledecl + "<br/>");
     }
@@ -106,5 +107,5 @@ function getFAList(strClassName)
 
 init();
 getFAList("fa-solid");
-getFAList("fa-brands");
 getFAList("fa-regular");
+getFAList("fa-brands");

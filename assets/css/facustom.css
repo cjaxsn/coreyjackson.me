@@ -616,82 +616,77 @@
  /* Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
     readers do not read off random characters that represent icons */
  
-/*fa-solid*/
-.fa-user { --fa: "\f007"; }
-.fa-briefcase { --fa: "\f0b1"; }
-.fa-calendar-circle-user { --fa: "\e471"; }
-.fa-circles-overlap-3 { --fa: "\e6a1"; }
-.fa-home { --fa: "\f015"; }
-.fa-earth-americas { --fa: "\f57d"; }
-.fa-passport { --fa: "\f5ab"; }
-.fa-person-military-rifle { --fa: "\e54b"; }
-.fa-feather { --fa: "\f52d"; }
-.fa-venus-mars { --fa: "\f228"; }
-.fa-book-bible { --fa: "\f647"; }
-.fa-truck { --fa: "\f0d1"; }
-.fa-copy { --fa: "\f0c5"; }
-.fa-file-certificate { --fa: "\f5f3"; }
-.fa-file-arrow-down { --fa: "\f56d"; }
-.fa-rectangle-history { --fa: "\e4a2"; }
-.fa-user-tie { --fa: "\f508"; }
-.fa-list-check { --fa: "\f0ae"; }
-.fa-box-open-full { --fa: "\f49c"; }
-.fa-briefcase { --fa: "\f0b1"; }
-.fa-lightbulb-gear { --fa: "\e5fd"; }
-.fa-book-user { --fa: "\f7e7"; }
-.fa-microchip-ai { --fa: "\e1ec"; }
-.fa-cloud { --fa: "\f0c2"; }
-.fa-square-code { --fa: "\e267"; }
-.fa-browser { --fa: "\f37e"; }
-.fa-object-group { --fa: "\f247"; }
-.fa-file-code { --fa: "\f1c9"; }
-.fa-cart-shopping-fast { --fa: "\e0dc"; }
-.fa-display-code { --fa: "\e165"; }
-.fa-arrow-right-arrow-left { --fa: "\f0ec"; }
-.fa-book-open-reader { --fa: "\f5da"; }
-.fa-infinity { --fa: "\f534"; }
-.fa-code-branch { --fa: "\f126"; }
-.fa-database { --fa: "\f1c0"; }
-.fa-gears { --fa: "\f085"; }
-.fa-chart-mixed { --fa: "\f643"; }
-.fa-brackets-curly { --fa: "\f7ea"; }
-.fa-sharp { --fa: "\f1c0"; }
-.fa-database { --fa: "\f1c0"; }
-.fa-calendar-clock { --fa: "\e0d2"; }
-.fa-gears { --fa: "\f085"; }
-.fa-monitor-waveform { --fa: "\f611"; }
-.fa-hexagon-nodes { --fa: "\e699"; }
-.fa-lock { --fa: "\f023"; }
-.fa-network-wired { --fa: "\f6ff"; }
-.fa-chart-network { --fa: "\f78a"; }
-.fa-computer { --fa: "\e4e5"; }
-.fa-gear-complex { --fa: "\e5e9"; }
-.fa-microchip { --fa: "\f2db"; }
-.fa-paintbrush-pencil { --fa: "\e206"; }
-.fa-chart-scatter-bubble { --fa: "\e0e9"; }
-.fa-window { --fa: "\f40e"; }
-.fa-user-helmet-safety { --fa: "\f82c"; }
-.fa-arrow-up-right-from-square { --fa: "\f08e"; }
-.fa-graduation-cap { --fa: "\f19d"; }
-.fa-transporter { --fa: "\e042"; }
-.fa-spa { --fa: "\f5bb"; }
-.fa-uniform-martial-arts { --fa: "\e3d1"; }
-.fa-file-certificate { --fa: "\f5f3"; }
-.fa-people-group { --fa: "\e533"; }
-.fa-language { --fa: "\f1ab"; }
-.fa-industry-windows { --fa: "\f3b3"; }
-.fa-shield-heart { --fa: "\e574"; }
-.fa-brain-circuit { --fa: "\e0c6"; }
-.fa-head-side-brain { --fa: "\f808"; }
-.fa-suitcase { --fa: "\f0f2"; }
-.fa-calendar { --fa: "\f133"; }
+    /*fa-solid*/
+    .fa-arrow-right-arrow-left { --fa: "\f0ec"; }
+    .fa-arrow-up-right-from-square { --fa: "\f08e"; }
+    .fa-book-bible { --fa: "\f647"; }
+    .fa-book-open-reader { --fa: "\f5da"; }
+    .fa-book-user { --fa: "\f7e7"; }
+    .fa-box-open-full { --fa: "\f49c"; }
+    .fa-brackets-curly { --fa: "\f7ea"; }
+    .fa-brain-circuit { --fa: "\e0c6"; }
+    .fa-briefcase { --fa: "\f0b1"; }
+    .fa-browser { --fa: "\f37e"; }
+    .fa-calendar { --fa: "\f133"; }
+    .fa-calendar-circle-user { --fa: "\e471"; }
+    .fa-calendar-clock { --fa: "\e0d2"; }
+    .fa-cart-shopping-fast { --fa: "\e0dc"; }
+    .fa-chart-mixed { --fa: "\f643"; }
+    .fa-chart-network { --fa: "\f78a"; }
+    .fa-chart-scatter-bubble { --fa: "\e0e9"; }
+    .fa-circles-overlap-3 { --fa: "\e6a1"; }
+    .fa-cloud { --fa: "\f0c2"; }
+    .fa-code-branch { --fa: "\f126"; }
+    .fa-computer { --fa: "\e4e5"; }
+    .fa-copy { --fa: "\f0c5"; }
+    .fa-database { --fa: "\f1c0"; }
+    .fa-display-code { --fa: "\e165"; }
+    .fa-earth-americas { --fa: "\f57d"; }
+    .fa-feather { --fa: "\f52d"; }
+    .fa-file-arrow-down { --fa: "\f56d"; }
+    .fa-file-certificate { --fa: "\f5f3"; }
+    .fa-file-code { --fa: "\f1c9"; }
+    .fa-gear-complex { --fa: "\e5e9"; }
+    .fa-gears { --fa: "\f085"; }
+    .fa-graduation-cap { --fa: "\f19d"; }
+    .fa-hexagon-nodes { --fa: "\e699"; }
+    .fa-home { --fa: "\f015"; }
+    .fa-industry-windows { --fa: "\f3b3"; }
+    .fa-infinity { --fa: "\f534"; }
+    .fa-language { --fa: "\f1ab"; }
+    .fa-lightbulb-gear { --fa: "\e5fd"; }
+    .fa-list-check { --fa: "\f0ae"; }
+    .fa-lock { --fa: "\f023"; }
+    .fa-microchip { --fa: "\f2db"; }
+    .fa-microchip-ai { --fa: "\e1ec"; }
+    .fa-monitor-waveform { --fa: "\f611"; }
+    .fa-network-wired { --fa: "\f6ff"; }
+    .fa-object-group { --fa: "\f247"; }
+    .fa-paintbrush-pencil { --fa: "\e206"; }
+    .fa-passport { --fa: "\f5ab"; }
+    .fa-person-military-rifle { --fa: "\e54b"; }
+    .fa-rectangle-history { --fa: "\e4a2"; }
+    .fa-sharp { --fa: "\f1c0"; }
+    .fa-spa { --fa: "\f5bb"; }
+    .fa-square-code { --fa: "\e267"; }
+    .fa-shield-heart { --fa: "\e574"; }
+    .fa-suitcase { --fa: "\f0f2"; }
+    .fa-transporter { --fa: "\e042"; }
+    .fa-truck { --fa: "\f0d1"; }
+    .fa-uniform-martial-arts { --fa: "\e3d1"; }
+    .fa-user { --fa: "\f007"; }
+    .fa-user-helmet-safety { --fa: "\f82c"; }
+    .fa-user-tie { --fa: "\f508"; }
+    .fa-venus-mars { --fa: "\f228"; }
+    .fa-window { --fa: "\f40e"; }
 
 
 /*fa-regular*/
-.fa-head-side-brain { --fa: "\f808"; }
 .fa-diagram-project { --fa: "\f542"; }
-.fa-triangle { --fa: "\f2ec"; }
+.fa-head-side-brain { --fa: "\f808"; }
+.fa-people-group { --fa: "\e533"; }
 .fa-rotate-180 { --fa: "\f2ec"; }
+.fa-triangle { --fa: "\f2ec"; }
 .fa-uniform-martial-arts { --fa: "\e3d1"; }
 
     :root, :host {
@@ -713,12 +708,11 @@
    --fa-style: 400;
  }
 
- /*fa-brands*/
+/* fa-brands*/
 .fa-accessible-icon { --fa: "\f368"; }
+.fa-instagram { --fa: "\f16d"; }
 .fa-linkedin { --fa: "\f08c"; }
 .fa-signal-messenger { --fa: "\e663"; }
-.fa-linkedin { --fa: "\f08c"; }
-.fa-instagram { --fa: "\f16d"; }
 .fa-square-github { --fa: "\f092"; }
 .fa-square-gitlab { --fa: "\e5ae"; }
 
