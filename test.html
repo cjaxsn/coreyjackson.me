@@ -60,7 +60,7 @@
         if (clElement != strClassName)
         {
           //console.log(clElement);
-          const strCSSDeclaration = ".fa-laptop { --fa: " + strFAUnicode + "; } ";
+          const strCSSDeclaration = "." + clElement + " { --fa: " + strFAUnicode + "; } ";
           console.log(strCSSDeclaration);
           document.getElementById("divCSSDeclaration").innerHTML = document.getElementById("divCSSDeclaration").innerHTML + strCSSDeclaration + "<br/>";
         }
