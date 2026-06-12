@@ -6,11 +6,10 @@
     <title>Test Page</title>
     <link rel="stylesheet" href="assets/css/all.css">
     <style type="text/css">
-        .myClass {
-          color: #FF0000;
-          border: 1px solid #000000;
-          cj: test;
-          --fa: "\f16d";
+        div.code
+        {
+          font-family: sans-serif;
+          background-color: #CCCCCC;
         }
     </style>
 </head>
@@ -23,7 +22,11 @@
   <i class="fa-solid fa-hashtag"></i>
   <i class="fa-brands fa-youtube"></i>
   <div>CSS Declaration</div>
-  <div id="divCSSDeclaration"></div>
+  <div id="divCSSDeclaration" class="code"></div>
+  <div>FA Unicode Values</div>
+  <div id="divFAUnicode" class="code"></div>
+  <div>Glyphhanger Unicode Values</div>
+  <div id="divGlyphhangerUnicode" class="code"></div>
   <script>
     function getUnicodeByName(iconName)
   {
@@ -36,13 +39,11 @@
     return faUnicode;
   }
 
-
-  /* .fa-laptop { --fa: "\f109"; } */
   function getFAList(strClassName)
   {
     const elements = document.querySelectorAll(`.${strClassName}`);
 
-    //document.getElementById("divCSSDeclaration").innerHTML = strClassName + "<br/>";
+    document.getElementById("divCSSDeclaration").insertAdjacentHTML('beforeend', "<br/>" + strClassName + "<br/>");
     console.log(strClassName);
 
     elements.forEach(element => {
@@ -54,7 +55,11 @@
       
       //get --fa value
       const strFAUnicode = objStyles.getPropertyValue('--fa');
+      const strGlyphhangerCode = "U+" + strFAUnicode.substring(2, strFAUnicode.length - 1);
       //console.log(strFAUnicode);
+      document.getElementById("divFAUnicode").insertAdjacentHTML('beforeend', strFAUnicode + "<br/>");
+      document.getElementById("divGlyphhangerUnicode").insertAdjacentHTML('beforeend', strGlyphhangerCode.toUpperCase() + ",");
+      
 
       element.classList.forEach(clElement => {
         if (clElement != strClassName)
@@ -62,15 +67,18 @@
           //console.log(clElement);
           const strCSSDeclaration = "." + clElement + " { --fa: " + strFAUnicode + "; } ";
           console.log(strCSSDeclaration);
-          document.getElementById("divCSSDeclaration").innerHTML = document.getElementById("divCSSDeclaration").innerHTML + strCSSDeclaration + "<br/>";
+          document.getElementById("divCSSDeclaration").insertAdjacentHTML('beforeend', strCSSDeclaration + "<br/>");
         }
       });
      
     });
   }
 
+  //brands U+20,U+2F,U+F167,U+F16D
+
   getFAList("fa-solid");
   getFAList("fa-brands");
+  getFAList("fa-regular");
   //document.getElementById("divResults").innerHTML = getUnicodeByName("fa-brands fa-instagram");
   //document.getElementById("divResults").innerHTML = document.getElementById("divResults").innerHTML + getUnicodeByName("fa-brands fa-facebook");
   </script>
