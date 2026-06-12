@@ -15,6 +15,12 @@
     </style>
 </head>
 <body>
+  <i class="fa-solid fa-laptop"></i>
+  <i class="fa-solid fa-user"></i>
+  <i class="fa-regular fa-laptop-arrow-down"></i>
+  <i class="fa-brands fa-instagram"></i>
+  <i class="fa-solid fa-hashtag"></i>
+  <i class="fa-brands fa-youtube"></i>
   <div id="divResults"></div>
   <script>
     function getUnicodeByName(iconName)
@@ -28,8 +34,26 @@
     return faUnicode;
   }
 
-  document.getElementById("divResults").innerHTML = getUnicodeByName("fa-brands fa-instagram");
-  document.getElementById("divResults").innerHTML = document.getElementById("divResults").innerHTML + getUnicodeByName("fa-brands fa-facebook");
+  function getFAList(strClassName)
+  {
+    const elements = document.querySelectorAll(`.${strClassName}`);
+
+    elements.forEach(element => {
+      console.log(element);
+      const styles = element.computedStyleMap()
+      const objFAProp = styles.get("--fa"); //CSSUnparsedValue
+      console.log(objFAProp);
+      const objStyles = window.getComputedStyle(element); //CSSStyleDeclaration
+      //console.log(objStyles);
+      const strFAUnicode = objStyles.getPropertyValue('--fa');
+      console.log(strFAUnicode);
+    });
+  }
+
+  getFAList("fa-solid");
+  getFAList("fa-brands");
+  //document.getElementById("divResults").innerHTML = getUnicodeByName("fa-brands fa-instagram");
+  //document.getElementById("divResults").innerHTML = document.getElementById("divResults").innerHTML + getUnicodeByName("fa-brands fa-facebook");
   </script>
 </body>
 </html>
