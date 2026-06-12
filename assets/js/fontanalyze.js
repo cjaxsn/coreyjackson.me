@@ -53,10 +53,11 @@ function getFAList(strClassName)
 {
     //console.log(strClassName);
     const elements = document.querySelectorAll(`.${strClassName}`);
-    
+
     document.getElementById("divCSSDeclaration").insertAdjacentHTML('beforeend', "<br/>/*" + strClassName + "*/ <br/>");
     document.getElementById("divGlyphhangerUnicode").insertAdjacentHTML('beforeend', "<br/>" + strClassName + ": "); 
-    
+
+    let arrFACSSDecl = [];
 
     elements.forEach(element => {
       //console.log(element);
@@ -67,6 +68,7 @@ function getFAList(strClassName)
       
       //get --fa value
       const strFAUnicode = objStyles.getPropertyValue('--fa');
+      //arrFACSSDecl.push(strFAUnicode);
       
       //Glphhanger unicode values
       const strGlyphhangerCode = "U+" + strFAUnicode.substring(2, strFAUnicode.length - 1);
@@ -76,22 +78,30 @@ function getFAList(strClassName)
       element.classList.forEach(clElement => {
         if ((clElement != strClassName) && (clElement != "fa-fw") && (clElement != "fa-2xl") && (clElement != "fa-2xs") && (clElement != "fa-xl") && (clElement.includes("fa-") == true))
         {
-          console.log(clElement);
+          //console.log(clElement);
 
           //Define FA CSS Declaration
           const strCSSDeclaration = "." + clElement + " { --fa: " + strFAUnicode + "; } ";
-          console.log(strCSSDeclaration);
-          document.getElementById("divCSSDeclaration").insertAdjacentHTML('beforeend', strCSSDeclaration + "<br/>");
+          //console.log(strCSSDeclaration);
+          arrFACSSDecl.push(strCSSDeclaration);
 
-          //TO DO - sort alphabetically
           //TO DO - remove duplicates
         }
       });
-     
+          
       //console.log(strFAUnicode);
       document.getElementById("divFAUnicode").insertAdjacentHTML('beforeend', strFAUnicode + "<br/>");
 
     });
+
+    arrFACSSDecl.sort();
+    console.log(arrFACSSDecl.length);
+    for (const styledecl of arrFACSSDecl) {
+      //console.log(styledecl);
+      document.getElementById("divCSSDeclaration").insertAdjacentHTML('beforeend', styledecl + "<br/>");
+    }
+
+    //console.log("exiting function");
 }
 
 init();
