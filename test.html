@@ -41,10 +41,12 @@
 
   function getFAList(strClassName)
   {
-    const elements = document.querySelectorAll(`.${strClassName}`);
-
-    document.getElementById("divCSSDeclaration").insertAdjacentHTML('beforeend', "<br/>" + strClassName + "<br/>");
     console.log(strClassName);
+    const elements = document.querySelectorAll(`.${strClassName}`);
+    
+    document.getElementById("divCSSDeclaration").insertAdjacentHTML('beforeend', "<br/>" + strClassName + "<br/>");
+    document.getElementById("divGlyphhangerUnicode").insertAdjacentHTML('beforeend', "<br/>" + strClassName + ": "); 
+    
 
     elements.forEach(element => {
       //console.log(element);
@@ -55,9 +57,11 @@
       
       //get --fa value
       const strFAUnicode = objStyles.getPropertyValue('--fa');
-      const strGlyphhangerCode = "U+" + strFAUnicode.substring(2, strFAUnicode.length - 1);
       //console.log(strFAUnicode);
       document.getElementById("divFAUnicode").insertAdjacentHTML('beforeend', strFAUnicode + "<br/>");
+
+      //Glphhanger unicode values
+      const strGlyphhangerCode = "U+" + strFAUnicode.substring(2, strFAUnicode.length - 1);
       document.getElementById("divGlyphhangerUnicode").insertAdjacentHTML('beforeend', strGlyphhangerCode.toUpperCase() + ",");
       
 
