@@ -82,35 +82,35 @@
 <div class="w3-sidebar w3-bar-block w3-border-right" style="display:none" id="sitenav">
     <br/><br/>
     <button id="btnNavClose" class="w3-bar-item w3-large" style="cursor: pointer;">Close &times;</button>
-    <a class="w3-bar-item w3-button w3-hover-theme" onclick="nav_close();" href="#overview">Overview</a>
-    <a class="w3-bar-item w3-button w3-hover-theme" onclick="nav_close();" href="#skills">Skills</a>
-    <a class="w3-bar-item w3-button w3-hover-theme w3-margin-left" onclick="nav_close();" href="#softskills">Soft Skills</a>
-    <a class="w3-bar-item w3-button w3-hover-theme w3-margin-left" onclick="nav_close();" href="#managementskills">Management Skills</a>
-    <a class="w3-bar-item w3-button w3-hover-theme w3-margin-left" onclick="nav_close();" href="#projectmanagement">Project Management</a>
-    <a class="w3-bar-item w3-button w3-hover-theme w3-margin-left" onclick="nav_close();" href="#productmanagement">Product Management</a>
-    <a class="w3-bar-item w3-button w3-hover-theme w3-margin-left" onclick="nav_close();" href="#technicalskills">Technical Skills</a>
+    <a id="aOverview" class="w3-bar-item w3-button w3-hover-theme" href="#overview">Overview</a>
+    <a id="aSkills" class="w3-bar-item w3-button w3-hover-theme" href="#skills">Skills</a>
+    <a id="aSoftskills" class="w3-bar-item w3-button w3-hover-theme w3-margin-left" href="#softskills">Soft Skills</a>
+    <a id="aManagementskills" class="w3-bar-item w3-button w3-hover-theme w3-margin-left" href="#managementskills">Management Skills</a>
+    <a id="aProjectmanagement" class="w3-bar-item w3-button w3-hover-theme w3-margin-left" href="#projectmanagement">Project Management</a>
+    <a id="aProductmanagement" class="w3-bar-item w3-button w3-hover-theme w3-margin-left" href="#productmanagement">Product Management</a>
+    <a id="aTechnicalskills" class="w3-bar-item w3-button w3-hover-theme w3-margin-left" href="#technicalskills">Technical Skills</a>
 
-    <a class="w3-bar-item w3-button w3-hover-theme w3-margin-left-24" onclick="nav_close();" href="#itsm">Service Management</a>
-    <a class="w3-bar-item w3-button w3-hover-theme w3-margin-left-24" onclick="nav_close();" href="#ai">AI</a>
-    <a class="w3-bar-item w3-button w3-hover-theme w3-margin-left-24" onclick="nav_close();" href="#architecture">Architecture</a>
-    <a class="w3-bar-item w3-button w3-hover-theme w3-margin-left-24" onclick="nav_close();" href="#computing">Computing</a>
-    <a class="w3-bar-item w3-button w3-hover-theme w3-margin-left-24" onclick="nav_close();" href="#softwaredevelopment">Software Development</a>
-    <a class="w3-bar-item w3-button w3-hover-theme w3-margin-left-24" onclick="nav_close();" href="#devops">DevOps</a>
-    <a class="w3-bar-item w3-button w3-hover-theme w3-margin-left-24" onclick="nav_close();" href="#sourcecontrol">Source Control</a>
-    <a class="w3-bar-item w3-button w3-hover-theme w3-margin-left-24" onclick="nav_close();" href="#data">Data</a>
-    <a class="w3-bar-item w3-button w3-hover-theme w3-margin-left-24" onclick="nav_close();" href="#ot">Operational Technology</a>
-    <a class="w3-bar-item w3-button w3-hover-theme w3-margin-left-24" onclick="nav_close();" href="#iot">IoT</a>
-    <a class="w3-bar-item w3-button w3-hover-theme w3-margin-left-24" onclick="nav_close();" href="#security">Security</a>
-    <a class="w3-bar-item w3-button w3-hover-theme w3-margin-left-24" onclick="nav_close();" href="#computernetworks">Computer Networks</a>
-    <a class="w3-bar-item w3-button w3-hover-theme w3-margin-left-24" onclick="nav_close();" href="#os">Operating Systems</a>
-    <a class="w3-bar-item w3-button w3-hover-theme w3-margin-left-24" onclick="nav_close();" href="#sysadmin">Systems Administration</a>
-    <a class="w3-bar-item w3-button w3-hover-theme w3-margin-left-24" onclick="nav_close();" href="#hardware">Hardware</a>
-    <a class="w3-bar-item w3-button w3-hover-theme w3-margin-left-24" onclick="nav_close();" href="#graphicsdesign">Graphics Design</a>
-    <a class="w3-bar-item w3-button w3-hover-theme w3-margin-left-24" onclick="nav_close();" href="#software">Software</a>
+    <a id="aServicemanagement" class="w3-bar-item w3-button w3-hover-theme w3-margin-left-24" href="#itsm">Service Management</a>
+    <a id="aAI" class="w3-bar-item w3-button w3-hover-theme w3-margin-left-24" href="#ai">AI</a>
+    <a id="aArchitecture" class="w3-bar-item w3-button w3-hover-theme w3-margin-left-24" href="#architecture">Architecture</a>
+    <a id="aComputing" class="w3-bar-item w3-button w3-hover-theme w3-margin-left-24" href="#computing">Computing</a>
+    <a id="aSoftwaredevelopment" class="w3-bar-item w3-button w3-hover-theme w3-margin-left-24" href="#softwaredevelopment">Software Development</a>
+    <a id="aDevops" class="w3-bar-item w3-button w3-hover-theme w3-margin-left-24" href="#devops">DevOps</a>
+    <a id="aSourcecontrol" class="w3-bar-item w3-button w3-hover-theme w3-margin-left-24" href="#sourcecontrol">Source Control</a>
+    <a id="aData" class="w3-bar-item w3-button w3-hover-theme w3-margin-left-24" href="#data">Data</a>
+    <a id="aOT" class="w3-bar-item w3-button w3-hover-theme w3-margin-left-24" href="#ot">Operational Technology</a>
+    <a id="aIOT" class="w3-bar-item w3-button w3-hover-theme w3-margin-left-24" href="#iot">IoT</a>
+    <a id="aSecurity" class="w3-bar-item w3-button w3-hover-theme w3-margin-left-24" href="#security">Security</a>
+    <a id="aComputernetworks" class="w3-bar-item w3-button w3-hover-theme w3-margin-left-24" href="#computernetworks">Computer Networks</a>
+    <a id="aOS" class="w3-bar-item w3-button w3-hover-theme w3-margin-left-24" href="#os">Operating Systems</a>
+    <a id="aSysadmin" class="w3-bar-item w3-button w3-hover-theme w3-margin-left-24" href="#sysadmin">Systems Administration</a>
+    <a id="aHardware" class="w3-bar-item w3-button w3-hover-theme w3-margin-left-24" href="#hardware">Hardware</a>
+    <a id="aGraphicsdesign" class="w3-bar-item w3-button w3-hover-theme w3-margin-left-24" href="#graphicsdesign">Graphics Design</a>
+    <a id="aSoftware" class="w3-bar-item w3-button w3-hover-theme w3-margin-left-24" href="#software">Software</a>
 
-    <a class="w3-bar-item w3-button w3-hover-theme" onclick="nav_close();" href="#workexperience">Work Experience</a>
-    <a class="w3-bar-item w3-button w3-hover-theme" onclick="nav_close();" href="#education">Education</a>
-    <a class="w3-bar-item w3-button w3-hover-theme" onclick="nav_close();" href="#extracurricular">Extracurricular Activities</a>
+    <a id="aWorkexperience" class="w3-bar-item w3-button w3-hover-theme" href="#workexperience">Work Experience</a>
+    <a id="aEducation" class="w3-bar-item w3-button w3-hover-theme" href="#education">Education</a>
+    <a id="aExtracurricular" class="w3-bar-item w3-button w3-hover-theme" href="#extracurricular">Extracurricular Activities</a>
 </div>
 
 <!-- Page Content -->
@@ -125,6 +125,33 @@
 <script nonce="151J5kguf+YObKJNZgoLvw==">
     document.getElementById("btnNav").addEventListener('click', (e) => nav_open(e));
     document.getElementById("btnNavClose").addEventListener('click', (e) => nav_close(e));
+    document.getElementById("aOverview").addEventListener('click', (e) => nav_close(e));
+    document.getElementById("aSkills").addEventListener('click', (e) => nav_close(e));
+    document.getElementById("aSoftskills").addEventListener('click', (e) => nav_close(e));
+    document.getElementById("aManagementskills").addEventListener('click', (e) => nav_close(e));
+    document.getElementById("aProjectmanagement").addEventListener('click', (e) => nav_close(e));
+    document.getElementById("aProductmanagement").addEventListener('click', (e) => nav_close(e));
+    document.getElementById("aTechnicalskills").addEventListener('click', (e) => nav_close(e));
+    document.getElementById("aServicemanagement").addEventListener('click', (e) => nav_close(e));
+    document.getElementById("aAI").addEventListener('click', (e) => nav_close(e));
+    document.getElementById("aArchitecture").addEventListener('click', (e) => nav_close(e));
+    document.getElementById("aComputing").addEventListener('click', (e) => nav_close(e));
+    document.getElementById("aSoftwaredevelopment").addEventListener('click', (e) => nav_close(e));
+    document.getElementById("aDevops").addEventListener('click', (e) => nav_close(e));
+    document.getElementById("aSourcecontrol").addEventListener('click', (e) => nav_close(e));
+    document.getElementById("aData").addEventListener('click', (e) => nav_close(e));
+    document.getElementById("aOT").addEventListener('click', (e) => nav_close(e));
+    document.getElementById("aIOT").addEventListener('click', (e) => nav_close(e));
+    document.getElementById("aSecurity").addEventListener('click', (e) => nav_close(e));
+    document.getElementById("aComputernetworks").addEventListener('click', (e) => nav_close(e));
+    document.getElementById("aOS").addEventListener('click', (e) => nav_close(e));
+    document.getElementById("aSysadmin").addEventListener('click', (e) => nav_close(e));
+    document.getElementById("aHardware").addEventListener('click', (e) => nav_close(e));
+    document.getElementById("aGraphicsdesign").addEventListener('click', (e) => nav_close(e));
+    document.getElementById("aSoftware").addEventListener('click', (e) => nav_close(e));
+    document.getElementById("aWorkexperience").addEventListener('click', (e) => nav_close(e));
+    document.getElementById("aEducation").addEventListener('click', (e) => nav_close(e));
+    document.getElementById("aExtracurricular").addEventListener('click', (e) => nav_close(e));
 
     function nav_open() {
         document.getElementById("sitenav").style.display = "block";
@@ -1188,6 +1215,10 @@
                     <div class="skill">Firebase</div>
                     <div class="w3-light-grey">
                         <div class="w3-container w3-theme w3-center nowrap" style="width:10%">&lt;1yr</div>
+                    </div>
+                    <div class="skill">Cloudflare KV</div>
+                    <div class="w3-light-grey">
+                        <div class="w3-container w3-theme w3-center nowrap" style="width:10%">1yr</div>
                     </div>
                     <div class="w3-large w3-bold w3-padding-top-24 w3-border-bottom"><i class="fa-sharp fa-solid fa-database"></i> Big Data</div>
                     <div class="skill">Hadoop</div>
