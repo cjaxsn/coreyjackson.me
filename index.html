@@ -31,6 +31,16 @@
 
         html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 
+        #sitenav
+        {
+            display:none;
+        }
+
+        .cursorpointer
+        {
+            cursor: pointer;
+        }
+
         .nowrap
         {
             white-space: nowrap;
@@ -52,6 +62,12 @@
             position: sticky;
             top: 0;
             z-index: 1000;
+        }
+
+        .profilepic
+        {
+            width:100%;
+            z-index:-1;
         }
 
         /*detect dark mode: https://drafts.csswg.org/mediaqueries-5/#prefers-color-scheme, example on https://symfony.com/*/
@@ -79,9 +95,9 @@
 </head>
 <body class="w3-light-grey">
 <!-- Sidebar -->
-<div class="w3-sidebar w3-bar-block w3-border-right" style="display:none" id="sitenav">
+<div class="w3-sidebar w3-bar-block w3-border-right" id="sitenav">
     <br/><br/>
-    <button id="btnNavClose" class="w3-bar-item w3-large" style="cursor: pointer;">Close &times;</button>
+    <button id="btnNavClose" class="w3-bar-item w3-large cursorpointer">Close &times;</button>
     <a id="aOverview" class="w3-bar-item w3-button w3-hover-theme" href="#overview">Overview</a>
     <a id="aSkills" class="w3-bar-item w3-button w3-hover-theme" href="#skills">Skills</a>
     <a id="aSoftskills" class="w3-bar-item w3-button w3-hover-theme w3-margin-left" href="#softskills">Soft Skills</a>
@@ -162,7 +178,7 @@
     }
 </script>
 <!-- Page Container -->
-<div class="w3-content w3-margin-top" style="max-width:1400px;">
+<div class="w3-content w3-margin-top">
 
     <!-- The Grid -->
     <div class="w3-row-padding">
@@ -172,7 +188,7 @@
 
             <div class="w3-white w3-text-grey w3-card-4">
                 <div class="w3-display-container">
-                    <img src="images/about.webp" fetchpriority="high" style="width:100%; z-index:-1;" alt="Corey Jackson">
+                    <img src="images/about.webp" fetchpriority="high" class="profilepic" alt="Corey Jackson">
                 </div>
                 <div class="w3-container" id="overview">
                     <p><i class="fa-solid fa-user fa-fw w3-margin-right w3-large w3-text-theme"></i>Corey Jackson</p>
