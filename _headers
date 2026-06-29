@@ -1,11 +1,15 @@
+/*
+Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+X-Frame-Options: DENY
+Cross-Origin-Opener-Policy: same-origin
+Permissions-Policy: geolocation=(self "https://jax.tech")
+X-XSS-Protection: 1; mode=block
+Access-Control-Allow-Origin: https://anylove.jax.tech
+Last-Modified: Tue, 29 Jun 2026 17:51:45 GMT
+#Content-Security-Policy: script-src 'self' 'unsafe-inline' https://static.cloudflareinsights.com https://cloudflareinsights.com
+
 https://coreyjackson-me.pages.dev/*
   X-Robots-Tag: noindex
 
-https://static.cloudflareinsights.com/beacon.min.js
-  Cache-Control: public, max-age=2592000, immutable
-
 https://static.cloudflareinsights.com/*
   Cache-Control: public, max-age=2592000, immutable
-
-/*
-  Content-Security-Policy: script-src 'self' 'unsafe-inline' https://static.cloudflareinsights.com https://cloudflareinsights.com
