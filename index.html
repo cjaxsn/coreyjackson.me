@@ -115,7 +115,7 @@
 
 <!-- Page Content -->
 <div class="w3-theme sticky">
-    <button class="w3-button w3-theme w3-xlarge" onclick="nav_open()">☰</button> Professional CV - Corey Jackson (Open to Work)
+    <button id="btnNav" class="w3-button w3-theme w3-xlarge">☰</button> Professional CV - Corey Jackson (Open to Work)
     <div class="w3-container">
 
     </div>
@@ -123,6 +123,8 @@
 
 
 <script nonce="151J5kguf+YObKJNZgoLvw==">
+    document.getElementById("btnNav").addEventListener('click', (e) => nav_open(e));
+
     function nav_open() {
         document.getElementById("sitenav").style.display = "block";
     }
