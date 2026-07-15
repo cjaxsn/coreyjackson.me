@@ -2555,11 +2555,36 @@
         document.getElementById("aWorkexperience").addEventListener('click', (e) => nav_close(e));
         document.getElementById("aEducation").addEventListener('click', (e) => nav_close(e));
         document.getElementById("aExtracurricular").addEventListener('click', (e) => nav_close(e));
-        document.getElementById("iLinkedInProfile").addEventListener('click', (e) => { navigator.clipboard.writeText(e.currentTarget.getAttribute('data-link')) }); // 'https://www.linkedin.com/in/cjaxsn'
-        document.getElementById("iSignal").addEventListener('click', (e) => { navigator.clipboard.writeText(e.currentTarget.getAttribute('data-link')) });
+        document.getElementById("iLinkedInProfile").addEventListener('click', (e) => { copyText(e.currentTarget); }); // 'https://www.linkedin.com/in/cjaxsn'
+        document.getElementById("iSignal").addEventListener('click', (e) => { copyText(e.currentTarget); });
 
         //console.log(document.getElementById("iLinkedInProfile").getAttribute('data-link'));
    });
+
+   async function copyText(element)
+   {
+        try
+        {
+            await navigator.clipboard.writeText(element.getAttribute('data-link'));
+            //console.log("text copied");
+            const divCopyStatus = document.createElement('span');
+            divCopyStatus.innerHTML = "&#9989;";
+            divCopyStatus.style.position = "relative";
+            divCopyStatus.style.left = "0";
+            divCopyStatus.style.zIndex = 99;
+            //divCopyStatus.style.border = "1px solid #000000";
+            //divCopyStatus.style.backgroundColor = "#FFFFDD";
+            divCopyStatus.title = "Copied";
+            element.insertAdjacentElement("afterend", divCopyStatus);
+            setTimeout(() => {
+                divCopyStatus.remove();
+            }, 2000);
+        }
+        catch (err)
+        {
+            console.err("failed to copy text:" + err);
+        }
+   }
 
     function nav_open() {
         document.getElementById("sitenav").style.display = "block";
