@@ -2568,7 +2568,7 @@
             await navigator.clipboard.writeText(element.getAttribute('data-link'));
             //console.log("text copied");
             const divCopyStatus = document.createElement('span');
-            divCopyStatus.innerHTML = "&#9989;";
+            divCopyStatus.textContent = "✅";
             divCopyStatus.style.position = "relative";
             divCopyStatus.style.left = "0";
             divCopyStatus.style.zIndex = 99;
