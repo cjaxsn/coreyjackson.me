@@ -2555,8 +2555,10 @@
         document.getElementById("aWorkexperience").addEventListener('click', (e) => nav_close(e));
         document.getElementById("aEducation").addEventListener('click', (e) => nav_close(e));
         document.getElementById("aExtracurricular").addEventListener('click', (e) => nav_close(e));
-        document.getElementById("iLinkedInProfile").addEventListener('click', (e) => { javascript:navigator.clipboard.writeText('https://www.linkedin.com/in/cjaxsn') });
-        document.getElementById("iSignal").addEventListener('click', (e) => { javascript:navigator.clipboard.writeText('cjaxsn.23') });  
+        document.getElementById("iLinkedInProfile").addEventListener('click', (e) => { navigator.clipboard.writeText(e.currentTarget.getAttribute('data-link')) }); // 'https://www.linkedin.com/in/cjaxsn'
+        document.getElementById("iSignal").addEventListener('click', (e) => { navigator.clipboard.writeText(e.currentTarget.getAttribute('data-link')) });
+
+        //console.log(document.getElementById("iLinkedInProfile").getAttribute('data-link'));
    });
 
     function nav_open() {
