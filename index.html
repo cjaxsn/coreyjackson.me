@@ -11,7 +11,7 @@
 	<link rel="preload" href="assets/webfonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="assets/css/w3.min.css" as="style" type="text/css">
     <link rel="preload" href="assets/css/w3-theme-blue.min.css" as="style" type="text/css">
-    <link rel="preload" href="assets/css/facustom.min.css" as="style" type="text/css">
+    <link rel="preload" href="assets/css/facustom.css" as="style" type="text/css">
     <link rel="stylesheet" href="assets/css/w3.min.css" nonce="N68A5y2/gSpt8TdpWy1tjQ==">
     <link rel="stylesheet" href="assets/css/w3-theme-blue.min.css" nonce="N68A5y2/gSpt8TdpWy1tjQ==">
     <link rel="stylesheet" href="assets/css/facustom.min.css" nonce="N68A5y2/gSpt8TdpWy1tjQ==">
@@ -2537,6 +2537,7 @@
          <a href="https://github.com/cjaxsn"><i class="fa-brands fa-square-github fa-2xl w3-hover-opacity"></i></a>
          <a href="https://gitlab.com/cjaxsn"><i class="fa-brands fa-square-gitlab fa-2xl w3-hover-opacity"></i></a>
          <a href="https://www.credly.com/users/cjaxsn"><i class="fa-solid fa-file-certificate fa-xl w3-hover-opacity"></i></a>
+         <i id="iPageShare" class="fa-solid fa-share-nodes fa-xl w3-hover-opacity"></i>
     <br/><br/>
   </footer>
   <script nonce="151J5kguf+YObKJNZgoLvw==" defer>
@@ -2573,9 +2574,25 @@
         document.getElementById("aExtracurricular").addEventListener('click', (e) => nav_close(e));
         document.getElementById("iLinkedInProfile").addEventListener('click', (e) => { copyText(e.currentTarget); }); // 'https://www.linkedin.com/in/cjaxsn'
         document.getElementById("iSignal").addEventListener('click', (e) => { copyText(e.currentTarget); });
+        document.getElementById("iPageShare").addEventListener('click', (e) => { sharePage(); });
+        
 
         //console.log(document.getElementById("iLinkedInProfile").getAttribute('data-link'));
    });
+
+   async function sharePage()
+    {
+        const shareData = {
+            title: 'Corey Jackson',
+            url: 'https://coreyjackson.me'
+        };
+        
+        try {
+            await navigator.share(shareData);
+        } catch (err) {
+            console.error(`Error: ${err}`);
+        }
+    }
 
    async function copyText(element)
    {

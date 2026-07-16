@@ -679,6 +679,9 @@
     .fa-user-tie { --fa: "\f508"; }
     .fa-venus-mars { --fa: "\f228"; }
     .fa-window { --fa: "\f40e"; }
+    .fa-share-nodes {
+      --fa: "\f1e0";
+}
 
 
 /*fa-regular*/
