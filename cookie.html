@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>coreyjackson.me GL Translate via CF Functions</title>
+    <script nonce="151J5kguf+YObKJNZgoLvw==">
+        async function setCookie()
+        {
+            try
+            {
+                if (!navigator.cookieEnabled) {
+                    document.cookie = "__Host-translatetext=123456789; Path=/; Secure; SameSite=Strict";
+                    console.log("Cookie:" + document.cookie);
+                }
+                else
+                {
+                    console.log("You need to enable cookies to translate text");
+                    alert("You need to enable cookies to translate text");
+                }
+            }
+            catch (err)
+            {
+                console.error("An error has occured setting cookie:" + err);
+            }
+        }
+        
+        async function getServerCookie()
+        {
+            const apiUrl = 'https://webdev.coreyjackson.me/api/translatetext';
+
+            const requestOptions = {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            };
+
+            try
+            {
+                const response = await fetch(apiUrl, requestOptions);
+                const data = await response.text();
+                //console.log("data returned");
+                console.log(data);
+            }
+            catch (error)
+            {
+                console.error("An error has occured in GET request:" + error);
+            }
+        }
+
+    async function translateText(targetLang, text)
+    {
+        const outputElement = document.getElementById('divOutput');
+
+        const apiUrl = 'https://webdev.coreyjackson.me/api/translatetext';
+
+        const requestOptions = {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            credentials: 'include',
+            body: JSON.stringify({
+                q: text,
+                source: 'en',
+                target: targetLang
+            })
+        };
+
+        //console.log("targetLang:" + targetLang);
+        console.log("text:" + text);
+
+        try
+        {
+            const response = await fetch(apiUrl, requestOptions);
+            const data = await response.text();
+            //console.log("data returned");
+            console.log(data);
+            outputElement.textContent = data;
+        }
+        catch (error)
+        {
+            console.error("An error has occured in POST request:" + error);
+        }
+    }
+
+    function init()
+    {
+        const lang = navigator.language;
+        //console.log(lang);
+        document.getElementById("txtTargetLang").value = lang;
+    }
+
+    window.addEventListener("load", (e) => {
+        document.getElementById("btnTranslate").addEventListener('click', (e) => { translateText(document.getElementById('txtTargetLang').value, document.getElementById('txtText').value); });
+        document.getElementById("btnSetCookie").addEventListener('click', (e) => { setCookie(); } );
+        init();   
+    });
+    </script>
+ </head>
+ <body>
+  Target lang:<input type="text" id="txtTargetLang" value="es"/><br/>
+  Text to translate: <input type="text" id="txtText" value="the cat walked down the street" size="50"/><br/>
+  <input type="button" id="btnSetCookie" value="Set Cookie"></br>
+  <input type="button" id="btnTranslate" value="Translate"><br/>
+  Translated Text:<div id="divOutput"></div>
+ </body>
+</html>
