@@ -6,7 +6,7 @@ Permissions-Policy: geolocation=(self "https://jax.tech")
 X-XSS-Protection: 1; mode=block
 Access-Control-Allow-Origin: https://anylove.jax.tech
 Last-Modified: Tue, 29 Jun 2026 17:51:45 GMT
-Content-Security-Policy: default-src 'self'; connect-src 'self' https://cloudflareinsights.com https://static.cloudflareinsights.com; script-src 'nonce-151J5kguf+YObKJNZgoLvw==' 'strict-dynamic' 'self'; style-src 'unsafe-inline' 'self'; object-src 'none'; img-src 'self'; base-uri 'none'; frame-ancestors 'none'; media-src 'self'; font-src 'self'; require-trusted-types-for 'script'
+Content-Security-Policy: default-src 'self'; connect-src 'self' https://webdev.coreyjackson.me https://cloudflareinsights.com https://static.cloudflareinsights.com; script-src 'nonce-151J5kguf+YObKJNZgoLvw==' 'strict-dynamic' 'self'; style-src 'unsafe-inline' 'self'; object-src 'none'; img-src 'self'; base-uri 'none'; frame-ancestors 'none'; media-src 'self'; font-src 'self'; require-trusted-types-for 'script'
 
 https://coreyjackson-me.pages.dev/*
   X-Robots-Tag: noindex
