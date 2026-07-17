@@ -9,7 +9,7 @@
         {
             try
             {
-                if (!navigator.cookieEnabled) {
+                if (navigator.cookieEnabled) {
                     document.cookie = "__Host-translatetext=123456789; Path=/; Secure; SameSite=Strict";
                     console.log("Cookie:" + document.cookie);
                 }
